@@ -10,21 +10,21 @@ export default function BookSimulation() {
         <p className="text-lg mb-8 text-muted-foreground">Please select the type of page turning effect you want to view</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <Link href="/book-simulation/left-turn" className="w-full">
+          <Link href="/book-simulation/left-turn/" className="w-full">
             <Button variant="outline" className="w-full h-16 text-lg gap-2" size="lg">
               <ArrowLeft className="w-5 h-5" />
               Left Page Turn
             </Button>
           </Link>
 
-          <Link href="/book-simulation/right-turn" className="w-full">
+          <Link href="/book-simulation/right-turn/" className="w-full">
             <Button variant="outline" className="w-full h-16 text-lg gap-2" size="lg">
               <ArrowRight className="w-5 h-5" />
               Right Page Turn
             </Button>
           </Link>
 
-          <Link href="/book-simulation/manual" className="w-full">
+          <Link href="/book-simulation/manual/" className="w-full">
             <Button variant="outline" className="w-full h-16 text-lg gap-2" size="lg">
               <Hand className="w-5 h-5" />
               Manual Page Turn
