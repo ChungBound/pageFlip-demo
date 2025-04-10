@@ -9,42 +9,42 @@ import { Button } from "@/components/ui/button"
 const pages = [
   {
     content:
-      "这是书本的第一页内容。欢迎来到这个交互式电子书体验！这个模拟真实书籍的翻页效果可以让您感受到纸质书的阅读体验。",
+      "This is the first page of the book. Welcome to this interactive e-book experience! This realistic page-turning effect allows you to feel the reading experience of a physical book.",
     pageNumber: 1,
   },
   {
     content:
-      "这是第二页的内容，我们继续探索这本数字书籍的模拟效果。现在每一行可以容纳更多的文字，就像真实的书籍一样，阅读体验更加舒适。",
+      "This is the second page, where we continue to explore the simulation effects of this digital book. Now each line can accommodate more text, just like a real book, making the reading experience more comfortable.",
     pageNumber: 2,
   },
   {
     content:
-      "第三页展示了我们如何创建一个逼真的翻页效果。通过精心设计的动画和阴影效果，我们可以模拟出纸张翻动时的自然感觉和视觉效果。",
+      "The third page demonstrates how we create a realistic page-turning effect. Through carefully designed animations and shadow effects, we can simulate the natural feel and visual effects of paper turning.",
     pageNumber: 3,
   },
   {
     content:
-      "第四页展示了如何通过直观的控件在书中导航。您可以使用屏幕底部的按钮或键盘的左右箭头键来翻页，就像在阅读真实的书籍一样简单直观。",
+      "The fourth page shows how to navigate through the book using intuitive controls. You can use the buttons at the bottom of the screen or the left and right arrow keys on your keyboard to turn pages, just as simple and intuitive as reading a real book.",
     pageNumber: 4,
   },
   {
     content:
-      "这是第五页，展示了更多的内容和交互效果。书页的宽度现在更接近真实书籍的比例，每行可以容纳更多的文字，使阅读体验更加自然舒适。",
+      "This is the fifth page, showcasing more content and interactive effects. The page width is now closer to the proportions of a real book, with each line accommodating more text, making the reading experience more natural and comfortable.",
     pageNumber: 5,
   },
   {
     content:
-      "第六页继续我们的阅读体验，感谢您的阅读！现在的书页宽度已经调整到更合理的尺寸，文字排版更加美观，阅读起来也更加舒适自然。",
+      "The sixth page continues our reading experience. Thank you for reading! The page width has been adjusted to a more reasonable size, with more beautiful text layout and a more comfortable, natural reading experience.",
     pageNumber: 6,
   },
   {
     content:
-      "第七页是额外的内容，用于测试多页翻转效果。我们可以看到，无论是向前翻页还是向后翻页，动画效果都非常流畅自然，就像在翻阅真实的书籍一样。",
+      "The seventh page contains additional content for testing multi-page turning effects. We can see that whether turning pages forward or backward, the animation effects are very smooth and natural, just like flipping through a real book.",
     pageNumber: 7,
   },
   {
     content:
-      "第八页是我们示例书的最后一页。希望您喜欢这个演示！这个电子书翻页效果可以应用于各种数字阅读场景，为用户提供更加沉浸式的阅读体验。",
+      "The eighth page is the last page of our sample book. We hope you enjoy this demonstration! This e-book page-turning effect can be applied to various digital reading scenarios, providing users with a more immersive reading experience.",
     pageNumber: 8,
   },
 ]
@@ -164,14 +164,14 @@ export function BookComponent({
 
   // 页面内容渲染函数
   const renderPageContent = (page: (typeof bookPages)[0] | null) => {
-    if (!page) return <div className="flex-1 flex items-center justify-center text-stone-400">封面/封底</div>
+    if (!page) return <div className="flex-1 flex items-center justify-center text-stone-400">Cover/Back Cover</div>
 
     return (
       <>
         <div className="flex-1 p-6 pb-0 overflow-auto">
           <p className="text-lg leading-relaxed">{page.content}</p>
         </div>
-        <div className="text-center text-sm text-gray-500 p-2">页码 {page.pageNumber}</div>
+        <div className="text-center text-sm text-gray-500 p-2">Page {page.pageNumber}</div>
       </>
     )
   }
@@ -445,12 +445,12 @@ export function BookComponent({
       )}
 
       {/* 提示信息 */}
-      {mode === "manual" && <p className="text-sm text-muted-foreground mt-4">提示: 您可以使用左右箭头键翻页</p>}
+      {mode === "manual" && <p className="text-sm text-muted-foreground mt-4">Tip: You can use left and right arrow keys to turn pages</p>}
       {mode === "auto-left" && (
-        <p className="text-sm text-muted-foreground mt-4">自动向左翻页演示 - 每{autoTurnInterval / 1000}秒翻一次页</p>
+        <p className="text-sm text-muted-foreground mt-4">Automatic Left Page Turn Demo - Turning page every {autoTurnInterval / 1000} seconds</p>
       )}
       {mode === "auto-right" && (
-        <p className="text-sm text-muted-foreground mt-4">自动向右翻页演示 - 每{autoTurnInterval / 1000}秒翻一次页</p>
+        <p className="text-sm text-muted-foreground mt-4">Automatic Right Page Turn Demo - Turning page every {autoTurnInterval / 1000} seconds</p>
       )}
     </div>
   )
