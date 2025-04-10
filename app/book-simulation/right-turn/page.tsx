@@ -12,7 +12,7 @@ export default function RightTurnPage() {
       <AutoRightTurnBook />
 
       <div className="mt-8">
-        <Link href="/book-simulation/">
+        <Link href="/book-simulation">
           <Button variant="outline" className="flex items-center gap-2">
             <ArrowLeft size={16} />
             Back to Selection
