@@ -430,7 +430,7 @@ export function BookComponent({
             className="flex items-center gap-2"
           >
             <ChevronLeft size={16} />
-            上一页
+            Previous
           </Button>
           <Button
             variant="outline"
@@ -438,7 +438,7 @@ export function BookComponent({
             disabled={normalizedIndex + 2 >= bookPages.length || isAnimating}
             className="flex items-center gap-2"
           >
-            下一页
+            Next
             <ChevronRight size={16} />
           </Button>
         </div>
